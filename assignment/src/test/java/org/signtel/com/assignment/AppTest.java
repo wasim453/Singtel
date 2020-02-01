@@ -5,7 +5,9 @@ import java.io.PrintStream;
 
 import org.signtel.com.assignment.model.Bird;
 import org.signtel.com.assignment.model.Chicken;
+import org.signtel.com.assignment.model.Dog;
 import org.signtel.com.assignment.model.Duck;
+import org.signtel.com.assignment.model.Parrot;
 import org.signtel.com.assignment.model.Rooster;
 
 import junit.framework.Assert;
@@ -46,6 +48,7 @@ public class AppTest extends TestCase{
         question1Test();
         question2Test();
         question3Test();
+        question4Test();
         testStream.reset();
     }
     
@@ -75,5 +78,12 @@ public class AppTest extends TestCase{
 		Rooster rooster = new Rooster();
 		rooster.sound();
 		Assert.assertEquals("Cock-a-doodle-doo\n", testStream.toString().trim());
+	}
+	
+	public void question4Test() {
+		Dog dog = new Dog();
+		Parrot parrot = new Parrot(dog);
+		parrot.sound();
+		Assert.assertEquals("Woof, woof\n", testStream.toString().trim());
 	}
 }
