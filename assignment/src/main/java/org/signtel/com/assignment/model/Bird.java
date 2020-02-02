@@ -6,7 +6,7 @@ package org.signtel.com.assignment.model;
  *
  */
 
-public class Bird extends Animal{
+public class Bird implements Animal{
 	
 	public void fly() {
 		System.out.println("I am flying");

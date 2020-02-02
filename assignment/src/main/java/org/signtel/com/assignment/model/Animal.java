@@ -6,8 +6,8 @@ package org.signtel.com.assignment.model;
  *
  */
 
-public abstract class Animal {
-	public void walk(){
+public interface Animal {
+	public default void walk(){
 		System.out.println("I am walking");
 	}
 	
